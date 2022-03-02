@@ -13,10 +13,11 @@ html {
   -webkit-text-size-adjust: 100%;
   background-color: #ffffff !important;
   font-family: 'Manrope', sans-serif !important;
-  min-height: 100vh !important;
+  min-height: 100% !important;
 }
 body {
   margin: 0;
+  min-height: 100% !important;
 }
 article,
 aside,
@@ -1094,12 +1095,12 @@ textarea {
   line-height: inherit;
 }
 a {
-  color: #FFF;
+  color: #000;
   text-decoration: none;
 }
 a:hover,
 a:focus {
-  color: #113845;
+  color: #0e0060;
   text-decoration: underline;
 }
 a:focus {
@@ -1338,7 +1339,7 @@ mark,
 }
 a.text-primary:hover,
 a.text-primary:focus {
-  color: #164959;
+  color: #0e0060;
 }
 .text-success {
   color: #3c763d;
@@ -1352,7 +1353,7 @@ a.text-success:focus {
 }
 a.text-info:hover,
 a.text-info:focus {
-  color: #245269;
+  color: #0e0060;
 }
 .text-warning {
   color: #8a6d3b;
@@ -1374,7 +1375,7 @@ a.text-danger:focus {
 }
 a.bg-primary:hover,
 a.bg-primary:focus {
-  background-color: #164959;
+  background-color: #0e0060;
 }
 .bg-success {
   background-color: #dff0d8;
@@ -3203,18 +3204,18 @@ fieldset[disabled] .btn-default.focus {
 }
 .btn-primary {
   color: #fff;
-  background-color: #206b82;
-  border-color: #1b5a6e;
+  background-color: #0e0060;
+  border-color: #0e0060;
 }
 .btn-primary:focus,
 .btn-primary.focus {
   color: #fff;
-  background-color: #164959;
+  background-color: #0e0060;
   border-color: #020607;
 }
 .btn-primary:hover {
   color: #fff;
-  background-color: #164959;
+  background-color: #0e0060;
   border-color: #0f323c;
 }
 .btn-primary:active,
@@ -9828,7 +9829,7 @@ h4 small {
 .account-masthead {
   min-height: 30px;
   color: #fff;
-  background: #0E0060;
+  background: #FFF;
 }
 .account-masthead:before,
 .account-masthead:after {
@@ -10814,7 +10815,7 @@ br.line-height2 {
   z-index: 0;
 }
 body {
-  background: #005d7a url("../../../base/images/bg.png");
+  background: #fff;
 }
 [hidden] {
   display: none;
