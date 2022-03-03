@@ -5,18 +5,18 @@
     <div class="account avatar authed" data-module="me" data-me="{{ c.userobj.id }}">
       <ul class="list-unstyled">
         {% block header_account_logged %} {% if c.userobj.sysadmin %}
-        <!-- <li>
+        <li>
           <a href="{{ h.url_for(controller='admin', action='index') }}" title="{{ _('Sysadmin settings') }}">
             <i class="fa fa-gavel" aria-hidden="true"></i>
             <span class="text">{{ _('Admin') }}</span>
           </a>
-        </li> -->
+        </li>
         {% endif %}
         <li>
           <!-- <a href="{{ h.url_for('user.read', id=c.userobj.name) }}" class="image" title="{{ _('View profile') }}"> -->
             <a href="{{ h.url_for('dashboard.datasets') }}" class="image" title="{{ _('View profile') }}">
             {{ h.user_image((c.user if c and c.user else ''), size=22) }}
-            <span class="username">{{ c.userobj.display_name }}</span>
+            <span class="username">{{ c.userobj.display_name + "'s Dashboard" }}</span>
           </a>
         </li>
         {% set new_activities = h.new_activities() %}
@@ -40,8 +40,8 @@
         {% endblock %} {% block header_account_log_out_link %}
         <li>
           <a href="{{ h.url_for('/user/_logout') }}" title="{{ _('Log out') }}">
-            <i class="fa fa-sign-out" aria-hidden="true"></i>
-            <span class="text">{{ _('Log out') }}</span>
+            <span class="username" aria-hidden="true">Logout</span>
+            <span class="text">{{ _('Logout') }}</span>
           </a>
         </li>
         {% endblock %} {% endblock %}
@@ -85,19 +85,24 @@
     </hgroup>
 
     <div class="collapse navbar-collapse" id="main-navigation-toggle">
-      <!-- {% block header_site_navigation %}
+      {% block header_site_navigation %}
       <nav class="section navigation">
         <ul class="nav nav-pills">
             {% block header_site_navigation_tabs %}
 		{{ h.build_nav_main(
+      ('home', _('Home')),
 		    ('dataset.search', _('Datasets')),
-		    ('organization.index', _('Organizations')),
-		    ('group.index', _('Groups')),
-		    ('home.about', _('About')) ) }}
+        ('home.about', _('About')))}}
+      <!-- {{ h.build_nav_main(
+      ('home', _('Home')),
+      ('dataset.search', _('Datasets')),
+      ('organization.index', _('Organizations')),
+      ('group.index', _('Groups')),
+      ('home.about', _('About')) ) }} -->
 	    {% endblock %}
         </ul>
       </nav>
-      {% endblock %} {% block header_site_search %}
+      <!-- {% endblock %} {% block header_site_search %}
       <form class="section site-search simple-input" action="{% url_for 'dataset.search' %}" method="get">
         <div class="field">
           <label for="field-sitewide-search">{% block header_site_search_label %}{{ _('Search Datasets') }}{% endblock %}</label>

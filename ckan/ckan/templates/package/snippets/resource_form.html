@@ -27,7 +27,7 @@
     {% endblock %}
 
     {% block basic_fields_name %}
-      {{ form.input('name', id='field-name', label=_(' '), placeholder=_('eg. January 2011 Gold Prices'), value=data.name, error=errors.name, type="hidden", classes=['control-full']) }}
+      {{ form.input('name', id='field-name', label=_('Name'), placeholder=_('Title of the resource'), value=data.name, error=errors.name, classes=['control-full']) }}
     {% endblock %}
 
     {% block basic_fields_description %}
@@ -73,9 +73,9 @@
         <button class="btn btn-default" name="save" value="go-dataset" type="submit">{{ _('Previous') }}</button>
       {% endblock %}
     {% endif %}
-    <!-- {% block again_button %}
+    {% block again_button %}
       <button class="btn btn-default" name="save" value="again" type="submit">{{ _('Save & add another') }}</button>
-    {% endblock %} -->
+    {% endblock %}
     {% if stage %}
       {% block save_button %}
         <button class="btn btn-primary" name="save" value="go-metadata" type="submit">{% block save_button_text %}{{ _('Finish') }}{% endblock %}</button>
