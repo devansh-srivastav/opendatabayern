@@ -24,9 +24,10 @@
     {% snippet 'snippets/package_list.html', packages=user_dict.datasets %}
   {% else %}
     <p class="empty">
-      {{ _('You haven\'t created any datasets.') }}
+      {{ _('Aktuell haben Sie noch keine Daten veröffentlicht. <br>
+      Ihre Daten werden nach dem Hinzufügen hier auf Ihrem Dashboard sichtbar sein.') }}
       {% if h.check_access('package_create') %}
-        {% link_for _('Create one now?'), named_route='dataset.new' %}
+        <!-- {% link_for _('Create one now?'), named_route='dataset.new' %} -->
       {% endif %}
     </p>
   {% endif %}

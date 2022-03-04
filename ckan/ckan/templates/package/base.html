@@ -11,8 +11,8 @@
   {% if pkg %}
     {% set dataset = h.dataset_display_name(pkg) %}
     {% if pkg.organization %}
-      {% set organization = h.get_translated(pkg.organization, 'title') or pkg.organization.name %}
-      {% set group_type = pkg.organization.type %}
+      <!-- {% set organization = h.get_translated(pkg.organization, 'title') or pkg.organization.name %}
+      {% set group_type = pkg.organization.type %} -->
       <li>{% link_for _('Organizations'), named_route=pkg.organization.type ~ '.index' %}</li>
       <li>{% link_for organization|truncate(30), named_route=pkg.organization.type ~ '.read', id=pkg.organization.name %}</li>
     {% else %}

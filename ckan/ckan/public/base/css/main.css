@@ -10929,3 +10929,108 @@ iframe {
 .margin-auto{
   margin:auto 0px !important;
 }
+
+.landing-container{
+             min-width:100%;
+             margin:auto;
+             padding:52px;
+             box-sizing: border-box;
+             min-height: 100vh;
+             display: flex;
+         }
+         .landing-div{
+             width:100%;
+             background-color:#F4FAFF;
+             border-radius: 20px;
+             display: flex;
+             flex: 1 1;
+
+         }
+
+         .landing-first,.landing-sec{
+             width:50%;
+             height:100%;
+             padding:50px;
+             display: flex;
+             flex-direction: column;
+             justify-content: center;
+         }
+
+         @media(max-width:768px){
+            .landing-div .landing-sec{
+                display: none;
+                
+            } 
+            .landing-div .landing-first{
+               align-items:center;
+               width:100%;
+            } 
+         }
+
+         .landing-sec{
+             position:relative;
+         }
+
+         .landing-sec .landing-logo{
+             position:absolute;
+         }
+
+         .hover-effects svg{
+            width:100%;
+         }
+
+         .hover-effects svg.normal{
+            opacity:1;
+            transition: opacity 100ms ease-out;
+         }
+
+         .hover-effects:hover svg.normal{
+            opacity:0;
+            height:0;
+           
+         }
+         
+         .hover-effects svg.hover{
+            height:0;
+           opacity:0;
+           transform: scale(0.9); 
+           transition: transform 500ms ease-out;
+         }
+
+         .hover-effects:hover svg.hover{
+            opacity:1;
+            height:515px;
+            transform: scale(1.1); 
+            transition: transform 500ms ease-out;
+         }
+
+         .landing-first{
+            align-items: center;
+         }
+
+         span.pink{
+             color:#FF0058;
+         }
+         h1.blue{
+             color:#0E0060
+         }
+         .blue-button{
+             padding:0px 20px;
+             background: #0E0060;
+             border-radius: 10px;
+             color:white;
+             border:none;
+             display:flex;
+             align-items:center
+             
+         }
+
+         .blue-button h3{
+           margin-top: 1em !important;
+           margin-bottom: 1em !important;
+         }
+
+         .blue-button:hover {
+  transform: scale(1.1); 
+  transition: transform 500ms ease-out;
+}
