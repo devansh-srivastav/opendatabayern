@@ -73,6 +73,14 @@ Example:
           {% endblock %}
         {% endif %}
       {% endblock %}
+      {% block license %}
+      {% if package.license_id %}
+            <p>{{ package.license_id }}</p>
+          {% else %}
+          <p>License is unknown</p>
+        {% endif %}
+      {% endblock %}
+      <strong>Modified on :</strong>{{ ' '+package.metadata_modified[:10] }}
     {% endblock %}
   </li>
 {% endblock %}

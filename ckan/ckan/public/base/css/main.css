@@ -8268,9 +8268,11 @@ fieldset[disabled] .control-custom.disabled .checkbox.btn.focus {
   line-height: 1;
 }
 .dataset-item {
-  border-bottom: 1px dotted #ddd;
-  padding-bottom: 20px;
+  /* border-bottom: 1px dotted #ddd; */
+  padding: 20px;
   margin-bottom: 20px;
+  border: 1px solid #000000;
+  border-radius: 10px;
 }
 @media (max-width: 991px) {
   .dataset-item {
@@ -8278,9 +8280,9 @@ fieldset[disabled] .control-custom.disabled .checkbox.btn.focus {
   }
 }
 .dataset-item:last-of-type {
-  border-bottom: none;
-  margin-bottom: 0;
-  padding-bottom: 0;
+  /* border-bottom: none; */
+  /* margin-bottom: 0;
+  padding-bottom: 0; */
 }
 .dataset-heading {
   font-size: 16px;
